@@ -37,7 +37,7 @@ exports.unlikepost=async (req,res)=>{
         const {post,like}=req.body;
 
         // Find and Delete from like db
-        const deletedLike=await  Like.findOneAndDelete({post:post,_id:like});
+        const deletedLike=await  Like.findOneAndDelete({post:post._id:like});
 // add rhe comment 
 // update the post collection  by deleteing the like using id 
 
